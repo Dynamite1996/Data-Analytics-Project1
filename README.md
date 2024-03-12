@@ -1,2 +1,2 @@
-# Data-Projects1
+# Data-Analytics-Projects1
 My two projects from MeriSkill: Sales Analysis and HR Atrittion.
