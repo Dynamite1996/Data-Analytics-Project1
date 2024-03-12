@@ -1,2 +1,2 @@
 # Sales-Analysis-Project
-My first project from MeriSkill
+My two projects from MeriSkill: Sales Analysis and HR Atrittion.
