@@ -1,4 +1,4 @@
-# MeriSkill Data Analytics Projects
+# MeriSkill Data Analyst Projects
 My two projects from MeriSkill: Sales Analysis and HR Atrittion.
 ## Sales Analysis Project
 Findings from my recent sales analysis project. The main objective was to examine sales data in order to pinpoint patterns, top-selling products, and revenue metrics that can inform strategic business decisions.
