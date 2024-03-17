@@ -32,3 +32,49 @@ The objective of this project is to develop a comprehensive HR employee attritio
 5. Employee Wellness (Page 5): The final page concentrates on employee wellness, offering insights into factors that impact employee satisfaction and well-being.
 
 This HR employee attrition dashboard not only delivers a comprehensive overview of attrition trends but also provides actionable insights for HR professionals to optimize employee retention strategies and enhance organizational effectiveness.
+## SQL Questions
+1. Table: sales (columns: date, product_id, revenue).
+   Question: Calculate the total revenue for each product in the year 2023.
+   SQL query:
+   
+   * SELECT product_id, SUM(revenue) AS total_revenue
+   - FROM sales
+   + WHERE YEAR(date) = 2023
+   * GROUP BY product_id;
+
+2. Tables: employees (columns: employee_id, department_id, salary); departments (columns: department_id, department_name).
+   Question: What is the average salary for each department?
+   SQL query:
+
+   * SELECT d.department_name, AVG(e.salary) AS avg_salary
+   - FROM employees e
+   + JOIN departments d ON e.department_id = d.department_id
+   * GROUP BY d.department_name;
+
+3. Table: orders (columns: order_id, customer_id, order_date, order_total).
+   Question: Who are the top 5 customers who spent the most in total?
+   SQL query:
+
+   * SELECT customer_id, SUM(order_total) AS total_spent
+   - FROM orders
+   + GROUP BY customer_id
+   * ORDER BY total_spent DESC
+   - LIMIT 5;
+
+4. Table: transactions (columns: transaction_id, transaction_date, amount, transaction_type).
+   Question: Total amount of purchases made in each month of the year 2023.
+   SQL query:
+
+   * SELECT MONTH(transaction_date) AS month, SUM(amount) AS total_purchases
+   - FROM transactions
+   + WHERE YEAR(transaction_date) = 2023 AND transaction_type = 'purchase'
+   * GROUP BY MONTH(transaction_date);
+
+5. Table: products (columns: product_id, product_name, price).
+   Question: What are the top 3 most expensive products?
+   SQL query:
+
+   - SELECT product_id, product_name, price
+   * FROM products
+   + ORDER BY price DESC
+   - LIMIT 3;
